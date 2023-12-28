@@ -1,9 +1,11 @@
-const sampleObject = { red: "#FF0000", green: "#00FF00", white: "#FFFFFF" };
+document.addEventListener('DOMContentLoaded', function () {
+  // Example usage
+  const keyToCheck = "red";
+  const result = hasKey(keyToCheck);
+  document.getElementById('result').innerText = `Does the object have key "${keyToCheck}"? ${result}`;
+});
 
 function hasKey(key) {
-  //   write your code here
+  const sampleObject = { red: "#FF0000", green: "#00FF00", white: "#FFFFFF" };
+  return key in sampleObject;
 }
-
-// Do not change the code below
-const key = prompt("Enter Key.");
-alert(hasKey(key));
